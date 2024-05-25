@@ -1,0 +1,19 @@
+{
+  "name": "azure-devops-extension-bundler-shelljs-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-default && npm run build-external",
+    "build-default": "esbuild task.js --platform=node --bundle --outfile=out/default.js",
+    "build-external": "esbuild task.js --platform=node --external:shelljs --bundle --outfile=out/external.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^4.12.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.4"
+  }
+}
