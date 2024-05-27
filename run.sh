@@ -6,4 +6,6 @@ rm -r node_modules
 
 # Execute the task
 cd out
-node task.js || echo "Failed"
+
+# Ensure the task did not fail
+node task.js || exit 1
