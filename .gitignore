@@ -1,2 +1,4 @@
-out
-node_modules
+out/*.js
+
+/node_modules
+.taskkey

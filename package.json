@@ -4,14 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-default && npm run build-external",
-    "build-default": "esbuild task.js --platform=node --bundle --outfile=out/default.js",
-    "build-external": "esbuild task.js --platform=node --external:shelljs --bundle --outfile=out/external.js"
+    "clean": "rm -rf out/*.js",
+    "build": "esbuild task.js --platform=node --external:shelljs --bundle --outfile=out/task.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "azure-pipelines-task-lib": "^4.12.1"
+    "azure-pipelines-task-lib": "4.12.1"
   },
   "devDependencies": {
     "esbuild": "^0.21.4"
